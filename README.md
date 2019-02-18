@@ -1,5 +1,7 @@
 
 # react-native-rxdnssd
+## Introduction
+This is a react-native wrapper for android https://github.com/andriydruk/RxDNSSD library. This has to be used only in android by making a check specifically so that this is used only on an android device.
 
 ## Getting started
 
@@ -11,17 +13,9 @@
 
 ### Manual installation
 
-
-#### iOS
-
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-rxdnssd` and add `Rxdnssd.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRxdnssd.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
-
 #### Android
 
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
+1. Open up `android/app/src/main/java/[...]/MainApplication.java`
   - Add `import com.reactlibrary.RxdnssdPackage;` to the imports at the top of the file
   - Add `new RxdnssdPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
@@ -34,20 +28,16 @@
       compile project(':react-native-rxdnssd')
   	```
 
+#### iOS
+iOS is not supported as rxdnssd is a android only project.
+
 #### Windows
-[Read it! :D](https://github.com/ReactWindows/react-native)
-
-1. In Visual Studio add the `Rxdnssd.sln` in `node_modules/react-native-rxdnssd/windows/Rxdnssd.sln` folder to their solution, reference from their app.
-2. Open up your `MainPage.cs` app
-  - Add `using Rxdnssd.Rxdnssd;` to the usings at the top of the file
-  - Add `new RxdnssdPackage()` to the `List<IReactPackage>` returned by the `Packages` method
-
+Windows is not supported as rxdnssd is an android only library
 
 ## Usage
 ```javascript
-import Rxdnssd from 'react-native-rxdnssd';
+import RNRxdnssd from 'react-native-rxdnssd';
 
 // TODO: What to do with the module?
-Rxdnssd;
+RNRxdnssd;
 ```
-  
